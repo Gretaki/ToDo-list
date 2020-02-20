@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--    Give your page a title-->
     <title>TodoTracker</title>
     <style>
         body{
@@ -50,15 +49,12 @@
 
     <button id="clear">Clear All</button>
 
-<!--    turetu buti seperate file JS cia bus-->
     <script>
         var formField = document.querySelector('form');
         var todoList = document.querySelector('ul');
         var button = document.querySelector('button');
         var input = document.getElementById('user-todo');
 
-        //var todosArray = [];
-        //sitas man perkrovus puslapi visko nenumeta
         var todosArray = localStorage.getItem('todos') ? JSON.parse(localStorage.getItem('todos')) : [];
 
         localStorage.setItem('todos', JSON.stringify(todosArray));
